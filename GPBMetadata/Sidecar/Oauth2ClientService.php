@@ -18,12 +18,16 @@ class Oauth2ClientService
         \GPBMetadata\Google\Api\Annotations::initOnce();
         $pool->internalAddGeneratedFile(
             '
-‡
+∑
 #sidecar/oauth2_client_service.protooat.envmgmt.sidecargoogle/api/annotations.proto""
 GetClientRequest
-id (	Rid2ê
+id (	Rid"B
+GetClientUserRequest
+id (	Rid
+username (	Rusername2£
 Oauth2ClientServicey
-	GetClient%.oat.envmgmt.sidecar.GetClientRequest .oat.envmgmt.common.Oauth2Client"#Ç”‰ì/api/v1/oauth2-clients/{id}BGZEgithub.com/oat-sa/environment-management/libs/lib-em-go-proto/sidecarbproto3'
+	GetClient%.oat.envmgmt.sidecar.GetClientRequest .oat.envmgmt.common.Oauth2Client"#Ç”‰ì/api/v1/oauth2-clients/{id}ê
+GetClientUser).oat.envmgmt.sidecar.GetClientUserRequest.oat.envmgmt.common.Oauth2User"4Ç”‰ì.,/api/v1/oauth2-clients/{id}/users/{username}BGZEgithub.com/oat-sa/environment-management/libs/lib-em-go-proto/sidecarbproto3'
         , true);
 
         static::$is_initialized = true;
