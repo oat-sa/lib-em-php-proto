@@ -26,23 +26,31 @@ class Oauth2Client extends \Google\Protobuf\Internal\Message
      */
     protected $client_secret = '';
     /**
-     * Generated from protobuf field <code>repeated string scopes = 4 [json_name = "scopes"];</code>
+     * Generated from protobuf field <code>bool is_confidential = 4 [json_name = "isConfidential"];</code>
+     */
+    protected $is_confidential = false;
+    /**
+     * Generated from protobuf field <code>repeated string scopes = 5 [json_name = "scopes"];</code>
      */
     private $scopes;
     /**
-     * Generated from protobuf field <code>string tenant_id = 5 [json_name = "tenantId"];</code>
+     * Generated from protobuf field <code>repeated .oat.envmgmt.common.Oauth2User users = 6 [json_name = "users"];</code>
+     */
+    private $users;
+    /**
+     * Generated from protobuf field <code>string tenant_id = 7 [json_name = "tenantId"];</code>
      */
     protected $tenant_id = null;
     /**
-     * Generated from protobuf field <code>string instance_url = 6 [json_name = "instanceUrl"];</code>
+     * Generated from protobuf field <code>string instance_url = 8 [json_name = "instanceUrl"];</code>
      */
     protected $instance_url = null;
     /**
-     * Generated from protobuf field <code>string owner_id = 7 [json_name = "ownerId"];</code>
+     * Generated from protobuf field <code>string owner_id = 9 [json_name = "ownerId"];</code>
      */
     protected $owner_id = null;
     /**
-     * Generated from protobuf field <code>.oat.envmgmt.common.OwnerType owner_type = 8 [json_name = "ownerType"];</code>
+     * Generated from protobuf field <code>.oat.envmgmt.common.OwnerType owner_type = 10 [json_name = "ownerType"];</code>
      */
     protected $owner_type = null;
 
@@ -55,7 +63,9 @@ class Oauth2Client extends \Google\Protobuf\Internal\Message
      *     @type string $name
      *     @type string $client_id
      *     @type string $client_secret
+     *     @type bool $is_confidential
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $scopes
+     *     @type \Oat\Envmgmt\Common\Oauth2User[]|\Google\Protobuf\Internal\RepeatedField $users
      *     @type string $tenant_id
      *     @type string $instance_url
      *     @type string $owner_id
@@ -134,7 +144,29 @@ class Oauth2Client extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated string scopes = 4 [json_name = "scopes"];</code>
+     * Generated from protobuf field <code>bool is_confidential = 4 [json_name = "isConfidential"];</code>
+     * @return bool
+     */
+    public function getIsConfidential()
+    {
+        return $this->is_confidential;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool is_confidential = 4 [json_name = "isConfidential"];</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setIsConfidential($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->is_confidential = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated string scopes = 5 [json_name = "scopes"];</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getScopes()
@@ -143,7 +175,7 @@ class Oauth2Client extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated string scopes = 4 [json_name = "scopes"];</code>
+     * Generated from protobuf field <code>repeated string scopes = 5 [json_name = "scopes"];</code>
      * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -156,7 +188,29 @@ class Oauth2Client extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string tenant_id = 5 [json_name = "tenantId"];</code>
+     * Generated from protobuf field <code>repeated .oat.envmgmt.common.Oauth2User users = 6 [json_name = "users"];</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getUsers()
+    {
+        return $this->users;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated .oat.envmgmt.common.Oauth2User users = 6 [json_name = "users"];</code>
+     * @param \Oat\Envmgmt\Common\Oauth2User[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setUsers($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Oat\Envmgmt\Common\Oauth2User::class);
+        $this->users = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string tenant_id = 7 [json_name = "tenantId"];</code>
      * @return string
      */
     public function getTenantId()
@@ -175,7 +229,7 @@ class Oauth2Client extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string tenant_id = 5 [json_name = "tenantId"];</code>
+     * Generated from protobuf field <code>string tenant_id = 7 [json_name = "tenantId"];</code>
      * @param string $var
      * @return $this
      */
@@ -188,7 +242,7 @@ class Oauth2Client extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string instance_url = 6 [json_name = "instanceUrl"];</code>
+     * Generated from protobuf field <code>string instance_url = 8 [json_name = "instanceUrl"];</code>
      * @return string
      */
     public function getInstanceUrl()
@@ -207,7 +261,7 @@ class Oauth2Client extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string instance_url = 6 [json_name = "instanceUrl"];</code>
+     * Generated from protobuf field <code>string instance_url = 8 [json_name = "instanceUrl"];</code>
      * @param string $var
      * @return $this
      */
@@ -220,7 +274,7 @@ class Oauth2Client extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string owner_id = 7 [json_name = "ownerId"];</code>
+     * Generated from protobuf field <code>string owner_id = 9 [json_name = "ownerId"];</code>
      * @return string
      */
     public function getOwnerId()
@@ -239,7 +293,7 @@ class Oauth2Client extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string owner_id = 7 [json_name = "ownerId"];</code>
+     * Generated from protobuf field <code>string owner_id = 9 [json_name = "ownerId"];</code>
      * @param string $var
      * @return $this
      */
@@ -252,7 +306,7 @@ class Oauth2Client extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.oat.envmgmt.common.OwnerType owner_type = 8 [json_name = "ownerType"];</code>
+     * Generated from protobuf field <code>.oat.envmgmt.common.OwnerType owner_type = 10 [json_name = "ownerType"];</code>
      * @return int
      */
     public function getOwnerType()
@@ -271,7 +325,7 @@ class Oauth2Client extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.oat.envmgmt.common.OwnerType owner_type = 8 [json_name = "ownerType"];</code>
+     * Generated from protobuf field <code>.oat.envmgmt.common.OwnerType owner_type = 10 [json_name = "ownerType"];</code>
      * @param int $var
      * @return $this
      */
