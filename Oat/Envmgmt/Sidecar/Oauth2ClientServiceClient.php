@@ -30,4 +30,18 @@ class Oauth2ClientServiceClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * @param \Oat\Envmgmt\Sidecar\GetClientUserRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetClientUser(\Oat\Envmgmt\Sidecar\GetClientUserRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/oat.envmgmt.sidecar.Oauth2ClientService/GetClientUser',
+        $argument,
+        ['\Oat\Envmgmt\Common\Oauth2User', 'decode'],
+        $metadata, $options);
+    }
+
 }
