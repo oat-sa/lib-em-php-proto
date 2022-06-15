@@ -69,6 +69,10 @@ class LtiRegistration extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string tenant_id = 14 [json_name = "tenantId"];</code>
      */
     protected $tenant_id = null;
+    /**
+     * Generated from protobuf field <code>string client_secret = 15 [json_name = "clientSecret"];</code>
+     */
+    protected $client_secret = null;
 
     /**
      * Constructor.
@@ -90,6 +94,7 @@ class LtiRegistration extends \Google\Protobuf\Internal\Message
      *     @type \Oat\Envmgmt\Common\LtiTool $tool
      *     @type \Oat\Envmgmt\Common\LtiPlatform $platform
      *     @type string $tenant_id
+     *     @type string $client_secret
      * }
      */
     public function __construct($data = NULL) {
@@ -491,6 +496,38 @@ class LtiRegistration extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->tenant_id = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string client_secret = 15 [json_name = "clientSecret"];</code>
+     * @return string
+     */
+    public function getClientSecret()
+    {
+        return isset($this->client_secret) ? $this->client_secret : '';
+    }
+
+    public function hasClientSecret()
+    {
+        return isset($this->client_secret);
+    }
+
+    public function clearClientSecret()
+    {
+        unset($this->client_secret);
+    }
+
+    /**
+     * Generated from protobuf field <code>string client_secret = 15 [json_name = "clientSecret"];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setClientSecret($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->client_secret = $var;
 
         return $this;
     }
