@@ -18,16 +18,30 @@ class Oauth2ClientService
         \GPBMetadata\Google\Api\Annotations::initOnce();
         $pool->internalAddGeneratedFile(
             '
-∑
+ø
+
 #sidecar/oauth2_client_service.protooat.envmgmt.sidecargoogle/api/annotations.proto""
 GetClientRequest
-id (	Rid"B
+id (	Rid"K
+!GetClientAndValidateSecretRequest
+id (	Rid
+secret (	Rsecret"B
 GetClientUserRequest
 id (	Rid
-username (	Rusername2£
+username (	Rusername"q
+\'GetClientUserAndValidatePasswordRequest
+id (	Rid
+username (	Rusername
+password (	Rpassword"u
+ValidateClientSecretRequestV
+oauth2ClientSecret (2&.oat.envmgmt.common.Oauth2ClientSecretRoauth2ClientSecret"u
+ValidateUserPasswordRequestV
+oauth2UserPassword (2&.oat.envmgmt.common.Oauth2UserPasswordRoauth2UserPassword2˝
 Oauth2ClientServicey
 	GetClient%.oat.envmgmt.sidecar.GetClientRequest .oat.envmgmt.common.Oauth2Client"#Ç”‰ì/api/v1/oauth2-clients/{id}ê
-GetClientUser).oat.envmgmt.sidecar.GetClientUserRequest.oat.envmgmt.common.Oauth2User"4Ç”‰ì.,/api/v1/oauth2-clients/{id}/users/{username}BGZEgithub.com/oat-sa/environment-management/libs/lib-em-go-proto/sidecarbproto3'
+GetClientUser).oat.envmgmt.sidecar.GetClientUserRequest.oat.envmgmt.common.Oauth2User"4Ç”‰ì.,/api/v1/oauth2-clients/{id}/users/{username}™
+ValidateUserPassword0.oat.envmgmt.sidecar.ValidateUserPasswordRequest$.oat.envmgmt.common.ValidationResult":Ç”‰ì4"/api/v1/validate-user-password:oauth2UserPassword™
+ValidateClientSecret0.oat.envmgmt.sidecar.ValidateClientSecretRequest$.oat.envmgmt.common.ValidationResult":Ç”‰ì4"/api/v1/validate-client-secret:oauth2ClientSecretBGZEgithub.com/oat-sa/environment-management/libs/lib-em-go-proto/sidecarbproto3'
         , true);
 
         static::$is_initialized = true;
