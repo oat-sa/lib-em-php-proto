@@ -44,4 +44,32 @@ class Oauth2ClientServiceClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * @param \Oat\Envmgmt\Sidecar\ValidateUserPasswordRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function ValidateUserPassword(\Oat\Envmgmt\Sidecar\ValidateUserPasswordRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/oat.envmgmt.sidecar.Oauth2ClientService/ValidateUserPassword',
+        $argument,
+        ['\Oat\Envmgmt\Common\ValidationResult', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Oat\Envmgmt\Sidecar\ValidateClientSecretRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function ValidateClientSecret(\Oat\Envmgmt\Sidecar\ValidateClientSecretRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/oat.envmgmt.sidecar.Oauth2ClientService/ValidateClientSecret',
+        $argument,
+        ['\Oat\Envmgmt\Common\ValidationResult', 'decode'],
+        $metadata, $options);
+    }
+
 }
