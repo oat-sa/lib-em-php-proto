@@ -28,11 +28,11 @@ class LtiKeyChain extends \Google\Protobuf\Internal\Message
     /**
      * Generated from protobuf field <code>string private_key = 4 [json_name = "privateKey"];</code>
      */
-    protected $private_key = '';
+    protected $private_key = null;
     /**
      * Generated from protobuf field <code>string private_key_passphrase = 5 [json_name = "privateKeyPassphrase"];</code>
      */
-    protected $private_key_passphrase = '';
+    protected $private_key_passphrase = null;
 
     /**
      * Constructor.
@@ -124,7 +124,17 @@ class LtiKeyChain extends \Google\Protobuf\Internal\Message
      */
     public function getPrivateKey()
     {
-        return $this->private_key;
+        return isset($this->private_key) ? $this->private_key : '';
+    }
+
+    public function hasPrivateKey()
+    {
+        return isset($this->private_key);
+    }
+
+    public function clearPrivateKey()
+    {
+        unset($this->private_key);
     }
 
     /**
@@ -146,7 +156,17 @@ class LtiKeyChain extends \Google\Protobuf\Internal\Message
      */
     public function getPrivateKeyPassphrase()
     {
-        return $this->private_key_passphrase;
+        return isset($this->private_key_passphrase) ? $this->private_key_passphrase : '';
+    }
+
+    public function hasPrivateKeyPassphrase()
+    {
+        return isset($this->private_key_passphrase);
+    }
+
+    public function clearPrivateKeyPassphrase()
+    {
+        unset($this->private_key_passphrase);
     }
 
     /**
