@@ -38,11 +38,15 @@ class LtiTool extends \Google\Protobuf\Internal\Message
      */
     protected $deep_linking_url = '';
     /**
-     * Generated from protobuf field <code>string owner_id = 7 [json_name = "ownerId"];</code>
+     * Generated from protobuf field <code>bool is_internal = 7 [json_name = "isInternal"];</code>
+     */
+    protected $is_internal = false;
+    /**
+     * Generated from protobuf field <code>string owner_id = 8 [json_name = "ownerId"];</code>
      */
     protected $owner_id = null;
     /**
-     * Generated from protobuf field <code>.oat.envmgmt.common.OwnerType owner_type = 8 [json_name = "ownerType"];</code>
+     * Generated from protobuf field <code>.oat.envmgmt.common.OwnerType owner_type = 9 [json_name = "ownerType"];</code>
      */
     protected $owner_type = null;
 
@@ -58,6 +62,7 @@ class LtiTool extends \Google\Protobuf\Internal\Message
      *     @type string $oidc_initiation_url
      *     @type string $launch_url
      *     @type string $deep_linking_url
+     *     @type bool $is_internal
      *     @type string $owner_id
      *     @type int $owner_type
      * }
@@ -200,7 +205,29 @@ class LtiTool extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string owner_id = 7 [json_name = "ownerId"];</code>
+     * Generated from protobuf field <code>bool is_internal = 7 [json_name = "isInternal"];</code>
+     * @return bool
+     */
+    public function getIsInternal()
+    {
+        return $this->is_internal;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool is_internal = 7 [json_name = "isInternal"];</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setIsInternal($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->is_internal = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string owner_id = 8 [json_name = "ownerId"];</code>
      * @return string
      */
     public function getOwnerId()
@@ -219,7 +246,7 @@ class LtiTool extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string owner_id = 7 [json_name = "ownerId"];</code>
+     * Generated from protobuf field <code>string owner_id = 8 [json_name = "ownerId"];</code>
      * @param string $var
      * @return $this
      */
@@ -232,7 +259,7 @@ class LtiTool extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.oat.envmgmt.common.OwnerType owner_type = 8 [json_name = "ownerType"];</code>
+     * Generated from protobuf field <code>.oat.envmgmt.common.OwnerType owner_type = 9 [json_name = "ownerType"];</code>
      * @return int
      */
     public function getOwnerType()
@@ -251,7 +278,7 @@ class LtiTool extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.oat.envmgmt.common.OwnerType owner_type = 8 [json_name = "ownerType"];</code>
+     * Generated from protobuf field <code>.oat.envmgmt.common.OwnerType owner_type = 9 [json_name = "ownerType"];</code>
      * @param int $var
      * @return $this
      */
